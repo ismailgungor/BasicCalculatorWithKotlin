@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".CalculatorActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_cal_history"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp18"
+            android:gravity="bottom|end"
+            android:paddingRight="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/et_cal_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:text="0"
+            android:textSize="@dimen/sp40"
+            android:gravity="end|center_vertical"
+            android:paddingRight="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingStart="@dimen/dp20"
+            android:singleLine="true"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cal_c"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="C"
+                android:onClick="restart"
+                />
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_opposite"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="+/-"
+                android:onClick="changePlusMinus"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_percentage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="%"
+                android:onClick="operation"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_divide"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:textSize="@dimen/sp25"
+                android:text="/"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:onClick="operation"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/dim_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@color/gray">
+
+            <Button
+                android:id="@+id/btn_cal_7"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="7"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_8"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="8"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_9"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="9"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_multiply"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:textSize="@dimen/sp25"
+                android:text="X"
+                android:textColor="@color/white"
+                android:onClick="operation"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/dim_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cal_4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="4"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="5"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="6"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_minus"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:textSize="@dimen/sp50"
+                android:text="-"
+                android:textColor="@color/white"
+                android:onClick="operation"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/dim_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn_cal_1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="1"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="2"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="3"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_plus"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:textSize="@dimen/sp25"
+                android:text="+"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:onClick="operation"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/dim_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cal_0"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text="0"
+                android:onClick="changeValue"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <ImageButton
+                android:id="@+id/btn_cal_delete"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:src="@drawable/ic_keyboard_backspace_black_36dp"
+                android:textSize="@dimen/sp25"
+                android:onClick="deleteNumber"
+                />
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+
+            <Button
+                android:id="@+id/btn_cal_comma"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/gray"
+                android:textSize="@dimen/sp25"
+                android:text=","
+                android:onClick="putDot"/>
+
+            <View
+                android:layout_width="@dimen/dp2"
+                android:layout_height="match_parent"
+                android:background="@color/dim_gray"/>
+
+            <Button
+                android:id="@+id/btn_cal_equal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:textSize="@dimen/sp25"
+                android:text="="
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:onClick="calculateResult"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
