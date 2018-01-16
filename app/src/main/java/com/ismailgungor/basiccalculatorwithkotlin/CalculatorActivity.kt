@@ -1,4 +1,4 @@
-package com.example.basiccalculatorwithkotlin
+package com.ismailgungor.basiccalculatorwithkotlin
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

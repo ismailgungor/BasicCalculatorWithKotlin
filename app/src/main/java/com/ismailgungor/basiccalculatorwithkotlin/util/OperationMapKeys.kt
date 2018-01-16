@@ -1,4 +1,4 @@
-package com.example.basiccalculatorwithkotlin.util
+package com.ismailgungor.basiccalculatorwithkotlin.util
 
 /**
  * Created by ismailgungor on 16.01.2018.

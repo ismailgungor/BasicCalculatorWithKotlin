@@ -1,8 +1,8 @@
-package com.example.basiccalculatorwithkotlin
+package com.ismailgungor.basiccalculatorwithkotlin
 
-import com.example.basiccalculatorwithkotlin.helper.CalculaterHelper
-import com.example.basiccalculatorwithkotlin.helper.MathOperationHelper
-import com.example.basiccalculatorwithkotlin.helper.TextAreaHelper
+import com.ismailgungor.basiccalculatorwithkotlin.helper.CalculaterHelper
+import com.ismailgungor.basiccalculatorwithkotlin.helper.MathOperationHelper
+import com.ismailgungor.basiccalculatorwithkotlin.helper.TextAreaHelper
 import dagger.Module
 import dagger.Provides
 

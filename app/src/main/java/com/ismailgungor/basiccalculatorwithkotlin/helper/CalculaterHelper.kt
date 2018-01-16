@@ -1,7 +1,7 @@
-package com.example.basiccalculatorwithkotlin.helper
+package com.ismailgungor.basiccalculatorwithkotlin.helper
 
 import android.widget.Button
-import com.example.basiccalculatorwithkotlin.util.OperationMapKeys
+import com.ismailgungor.basiccalculatorwithkotlin.util.OperationMapKeys
 
 /**
  * Created by ismailgungor on 16.01.2018.

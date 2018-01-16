@@ -1,4 +1,4 @@
-package com.example.basiccalculatorwithkotlin
+package com.ismailgungor.basiccalculatorwithkotlin
 
 import org.junit.Test
 

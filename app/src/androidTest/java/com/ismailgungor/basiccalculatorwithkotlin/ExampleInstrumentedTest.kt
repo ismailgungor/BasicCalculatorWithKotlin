@@ -1,4 +1,4 @@
-package com.example.basiccalculatorwithkotlin
+package com.ismailgungor.basiccalculatorwithkotlin
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

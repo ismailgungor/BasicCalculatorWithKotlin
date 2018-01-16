@@ -1,9 +1,9 @@
-package com.example.basiccalculatorwithkotlin
+package com.ismailgungor.basiccalculatorwithkotlin
 
 import android.widget.Button
-import com.example.basiccalculatorwithkotlin.helper.CalculaterHelper
-import com.example.basiccalculatorwithkotlin.helper.MathOperationHelper
-import com.example.basiccalculatorwithkotlin.util.OperationMapKeys
+import com.ismailgungor.basiccalculatorwithkotlin.helper.CalculaterHelper
+import com.ismailgungor.basiccalculatorwithkotlin.helper.MathOperationHelper
+import com.ismailgungor.basiccalculatorwithkotlin.util.OperationMapKeys
 import javax.inject.Inject
 
 /**
